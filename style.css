@@ -1,0 +1,71 @@
+/* Add CSS reset for margin, padding, and box-sizing consistency across elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Define base styles for links, spans, and buttons including interaction states */
+a {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+}
+span {
+  display: inline-block;
+}
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border: 0;
+}
+button:active {
+  scale: 0.95;
+}
+
+/* End CSS Reset */
+
+
+/* Add utility classes for display block and flex overrides with !important */
+.display-block {
+  display: block !important;
+}
+.display-flex {
+  display: flex !important;
+}
+
+/* Implement animated concentric circle effect for .win pseudo-element with responsive adjustments */
+.win::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 0.01%;
+  height: 0.01%;
+  box-shadow: none;
+  animation: concentricCircleEffect 1s ease-out forwards; /* Apply animation */
+}
+
+@keyframes concentricCircleEffect {
+  0% {
+    width: 0;
+    height: 0;
+    box-shadow: none;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 0 50px rgba(96, 110, 133, 0.2),
+      0 0 0 80px rgba(96, 110, 133, 0.15), 0 0 0 110px rgba(96, 110, 133, 0.1); /* Concentric circles effect */
+  }
+}

@@ -1,4 +1,3 @@
-/* Initialize DOM element selectors and game variables */
 const rulesBtn = document.querySelector("button.rules-btn");
 const rules = document.querySelector(".rules");
 const rulesExit = document.querySelector(".rules .heading img");
@@ -6,7 +5,7 @@ const overlay = document.querySelector(".overlay");
 const items = ["scissors", "paper", "rock", "lizard", "spock"];
 const score = document.querySelector(".score h1");
 
-/* Implement show/hide functionality for the rules modal */
+// Show/Hide Rules
 rulesBtn.addEventListener("click", () => {
   rules.classList.add("display-flex");
   overlay.classList.add("display-block");
@@ -31,10 +30,10 @@ hideBtns.forEach((btn) =>
   })
 );
 
-/* Load and display initial score from localStorage */
+// Set initial score
 score.textContent = localStorage.getItem("score") || 0;
 
-/* Add event listeners to game choice buttons to start the game */
+// Start the game
 function startGame() {
   const playingBtns = document.querySelectorAll("article button");
   playingBtns.forEach((btn) => {
@@ -46,7 +45,7 @@ function startGame() {
 }
 startGame();
 
-/* Implement step 2: Display player’s choice and prepare computer’s choice */
+// Step 2: Display player and computer choices
 function step2(btn) {
   const article = btn.parentElement;
   const originalBtnClone = btn.cloneNode(true);
@@ -80,7 +79,7 @@ function step2(btn) {
   rotateComputerChoice(computerChoice);
 }
 
-/* Create computer choice rotation animation */
+// Rotate the computer choice to simulate selection
 function rotateComputerChoice(computerChoice) {
   let currentIndex = 0;
   let rotationSpeed = 100; // Initial speed in milliseconds
@@ -109,7 +108,7 @@ function rotateComputerChoice(computerChoice) {
   updateChoice();
 }
 
-/* Finalize computer’s choice after rotation ends */
+// Finalize the computer choice and proceed to step 3
 function finalizeComputerChoice(computerChoice) {
   const finalIndex = Math.floor(Math.random() * items.length);
   const finalChoice = items[finalIndex];
@@ -121,7 +120,7 @@ function finalizeComputerChoice(computerChoice) {
   step3(computerChoice);
 }
 
-/* Implement step 3: Determine winner and update UI accordingly */
+// Step 3: Determine the winner and display the result
 function step3(computerChoice) {
   computerChoice.style.height = "auto";
 
@@ -167,7 +166,6 @@ function step3(computerChoice) {
     newScore--;
   }
 
-  /* Store updated score in localStorage and update score display */
   localStorage.setItem("score", newScore);
   score.textContent = newScore;
 
@@ -176,7 +174,7 @@ function step3(computerChoice) {
   step4();
 }
 
-/* Implement step 4: Reset game UI for a new round */
+// Step 4: Reset the game for a new round
 function step4() {
   const playAgain = document.querySelector(".result button");
 

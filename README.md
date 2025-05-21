@@ -20,3 +20,14 @@ Want to play? Just follow these steps:
 1. Clone the repository:  
    ```bash
    git clone https://github.com/Evn2025/rpsls.git
+
+   Validation
+<img width="534" alt="nuhtml" src="https://github.com/user-attachments/assets/55d7fb8d-08b5-4ef2-850f-7375c3d0817f" />
+
+
+<img width="337" alt="W3C css" src="https://github.com/user-attachments/assets/58d98191-dfe8-4190-b68e-d0399cc453f3" />
+
+
+<img width="453" alt="Lighthouse audit" src="https://github.com/user-attachments/assets/746d558d-cf04-4ab4-af3a-826779887aec" />
+
+

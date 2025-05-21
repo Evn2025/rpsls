@@ -5,7 +5,7 @@ Welcome to a **fun, accessible, and interactive** version of **Rock, Paper, Scis
 ## 🎮 What’s Inside?
 - **Smooth Gameplay** – Select a choice, let the game decide the winner, and watch your score update instantly.
 - **Stylish & Responsive UI** – Built with **Bootstrap**, ensuring an intuitive experience across all devices.
-- **Animations & Audio** – Subtle effects to enhance engagement and add a little flair.
+- **Animations ** – Subtle effects to enhance engagement and add a little flair.
 - **Accessibility Focus** – Designed to be usable and enjoyable by **everyone**, following best practices.
 
 ## 🔧 Technologies Used

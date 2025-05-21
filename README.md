@@ -21,7 +21,11 @@ Want to play? Just follow these steps:
    ```bash
    git clone https://github.com/Evn2025/rpsls.git
 
-   Validation
+   
+
+
+Validation
+   
 <img width="534" alt="nuhtml" src="https://github.com/user-attachments/assets/55d7fb8d-08b5-4ef2-850f-7375c3d0817f" />
 
 
